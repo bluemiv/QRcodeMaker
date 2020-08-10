@@ -33,9 +33,9 @@ class ColorBuilder:
         if not self._is_color(self._fill_color):
             raise ColorValueError("Invalid value for fill color. <{}>".format(self._fill_color))
 
-        return self.Color(self._background_color.upper(), self._fill_color.upper())
+        return self.__Color(self._background_color.upper(), self._fill_color.upper())
 
-    class Color:
+    class __Color:
         def __init__(self, background_color, fill_color):
             self._background_color = background_color
             self._fill_color = fill_color
