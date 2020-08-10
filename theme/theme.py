@@ -3,6 +3,10 @@
 from . import color
 
 
+class InvalidThemeError(RuntimeError):
+    pass
+
+
 class Theme:
 
     @staticmethod
@@ -58,12 +62,12 @@ class Theme:
     @staticmethod
     def get_lime_theme():
         builder = color.ColorBuilder()
-        return builder.set_background_color("#f4fce3").set_fill_color("#74b816").build()
+        return builder.set_background_color("#f4fce3").set_fill_color("#66a80f").build()
 
     @staticmethod
     def get_yellow_theme():
         builder = color.ColorBuilder()
-        return builder.set_background_color("#fff9db").set_fill_color("#f59f00").build()
+        return builder.set_background_color("#fff9db").set_fill_color("#e67700").build()
 
     @staticmethod
     def get_orange_theme():
